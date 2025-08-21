@@ -961,20 +961,6 @@ h2 {
     text-align: center;
 }
 
-.positive-review {
-    border-left-color: var(--color-success);
-    background: rgba(76, 175, 80, 0.08);
-}
-
-.negative-review {
-    border-left-color: var(--color-danger);
-    background: rgba(244, 67, 54, 0.08);
-}
-
-.neutral-review {
-    border-left-color: var(--color-warning);
-    background: rgba(255, 152, 0, 0.08);
-}
 
 /* تأثيرات النص والظلال */
 .text-glitch {
