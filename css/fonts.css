@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Garet';
+    src: url('../assets/fonts/Garet-Book.woff2') format('woff2'),
+         url('../assets/fonts/Garet-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garet';
+    src: url('../assets/fonts/Garet-Heavy.woff2') format('woff2'),
+         url('../assets/fonts/Garet-Heavy.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Garet', sans-serif;
+}
