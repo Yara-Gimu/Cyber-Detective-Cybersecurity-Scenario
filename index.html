@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Detective - Cybersecurity Scenario</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شاشة التحميل -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="hacker-animation">
+                <div class="terminal-screen">
+                    <div class="terminal-text">جاري تحميل نظام التحقيق...</div>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- شاشة البداية -->
+    <div id="start-screen" class="screen">
+        <div class="logos">
+            <img src="assets/images/logo1.png" alt="Logo 1">
+            <img src="assets/images/logo2.png" alt="Logo 2">
+        </div>
+        
+        <div class="cyber-glitch">
+            <h1 class="glitch" data-text="Cyber Detective">Cyber Detective</h1>
+        </div>
+        
+        <div class="start-content">
+            <p class="subtitle">مهمة تحقيقات الأمن السيبراني</p>
+            <button id="start-btn" class="btn cyber-btn">
+                <span>بدء التحقيق</span>
+                <i class="fas fa-terminal"></i>
+            </button>
+            <button id="help-btn" class="btn cyber-btn-secondary">
+                <span>كيفية اللعب</span>
+                <i class="fas fa-question-circle"></i>
+            </button>
+        </div>
+
+        <div class="cyber-decoration">
+            <div class="cyber-line"></div>
+            <div class="cyber-grid"></div>
+        </div>
+    </div>
+
+    <!-- شاشة التعليمات -->
+    <div id="help-screen" class="screen">
+        <div class="logos">
+            <img src="assets/images/logo1.png" alt="Logo 1">
+            <img src="assets/images/logo2.png" alt="Logo 2">
+        </div>
+        
+        <button class="back-btn" id="back-from-help">
+            <i class="fas fa-arrow-right"></i>
+            <span>رجوع</span>
+        </button>
+        
+        <h2>كيفية اللعب</h2>
+        
+        <div class="help-content">
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>تحليل الأدلة</h3>
+                <p>استعرض جميع الأدلة المتاحة وحللها للعثور على أدلة مهمة</p>
+            </div>
+            
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h3>المشتبه بهم</h3>
+                <p>تعرف على المشتبه بهم الثلاثة وادرس دوافعهم وإمكانياتهم</p>
+            </div>
+            
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <h3>حل اللغز</h3>
+                <p>استخدم الأدلة للوصول إلى الاستنتاج الصحيح وتحديد الجاني</p>
+            </div>
+            
+            <div class="help-tips">
+                <h4>نصائح مهمة:</h4>
+                <ul>
+                    <li>ابحث عن الأنماط غير العادية في سجلات الوصول</li>
+                    <li>انتبه إلى توقيت الأحداث والأحجام غير المعتادة</li>
+                    <li>ضع في اعتبارك الدوافع والفرص المتاحة لكل مشتبه به</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- شاشة القصة -->
+    <div id="story-screen" class="screen">
+        <div class="logos">
+            <img src="assets/images/logo1.png" alt="Logo 1">
+            <img src="assets/images/logo2.png" alt="Logo 2">
+        </div>
+        
+        <button class="back-btn" id="back-from-story">
+            <i class="fas fa-arrow-right"></i>
+            <span>رجوع</span>
+        </button>
+        
+        <div class="story-content">
+            <h2>القضية</h2>
+            <div class="story-text">
+                <p>في قسم المبيعات بشركة تكساس العالمية، تم اكتشاف تسريب خطير لقاعدة بيانات العملاء الحساسة.</p>
+                <p>المعلومات المسربة قد تعرض الشركة لخسائر مالية كبيرة وتضر بسمعتها في السوق.</p>
+                <p>هناك ثلاثة موظفين تحت دائرة الشك، ومهمتك هي تحليل الأدلة الرقمية للكشف عن الجاني الحقيقي.</p>
+                <p>استخدم مهاراتك التحليلية للتحقيق في سجلات الوصول وأنشطة الشبكة وتقارير الأداء.</p>
+            </div>
+            
+            <div class="case-file">
+                <div class="case-file-header">
+                    <i class="fas fa-file-alt"></i>
+                    <span>ملف القضية: #DB-2025-08</span>
+                </div>
+                <div class="case-file-content">
+                    <div class="case-info">
+                        <span class="case-label">التاريخ:</span>
+                        <span class="case-value">21-22 أغسطس 2025</span>
+                    </div>
+                    <div class="case-info">
+                        <span class="case-label">النوع:</span>
+                        <span class="case-value">تسريب بيانات</span>
+                    </div>
+                    <div class="case-info">
+                        <span class="case-label">الحالة:</span>
+                        <span class="case-value under-investigation">تحت التحقيق</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button id="continue-btn" class="btn cyber-btn">
+            <span>متابعة إلى المشتبه بهم</span>
+            <i class="fas fa-arrow-left"></i>
+        </button>
+    </div>
+
+    <!-- شاشة المشتبه بهم -->
+    <div id="suspects-screen" class="screen">
+        <div class="logos">
+            <img src="assets/images/logo1.png" alt="Logo 1">
+            <img src="assets/images/logo2.png" alt="Logo 2">
+        </div>
+        
+        <button class="back-btn" id="back-from-suspects">
+            <i class="fas fa-arrow-right"></i>
+            <span>رجوع</span>
+        </button>
+        
+        <h2>المشتبه بهم</h2>
+        
+        <div class="tab-navigation">
+            <button class="tab-btn active" data-tab="all">جميع المشتبه بهم</button>
+            <button class="tab-btn" data-tab="comparison">مقارنة بينهم</button>
+        </div>
+        
+        <div id="suspects-container" class="suspects-container">
+            <!-- سيتم ملؤه بواسطة JavaScript -->
+        </div>
+        
+        <div class="case-progress">
+            <div class="progress-text">تم جمع 65% من الأدلة</div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 65%"></div>
+            </div>
+        </div>
+        
+        <button id="to-evidence-btn" class="btn cyber-btn">
+            <span>الانتقال إلى الأدلة</span>
+            <i class="fas fa-folder-open"></i>
+        </button>
+    </div>
+
+    <!-- شاشة مقارنة المشتبه بهم -->
+    <div id="comparison-screen" class="screen">
+        <div class="logos">
+            <img src="assets/images/logo1.png" alt="Logo 1">
+            <img src="assets/images/logo2.png" alt="Logo 2">
+        </div>
+        
+        <button class="back-btn" id="back-from-comparison">
+            <i class="fas fa-arrow-right"></i>
+            <span>رجوع</span>
+        </button>
+        
+        <h2>مقارنة بين المشتبه بهم</h2>
+        
+        <div class="comparison-content">
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>المعيار</th>
+                            <th>Sami</th>
+                            <th>Layla</th>
+                            <th>Majed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>مدة العمل في الشركة</td>
+                            <td>6 سنوات</td>
+                            <td>3 أشهر</td>
+                            <td>3 سنوات</td>
+                        </tr>
+                        <tr>
+                            <td>مستوى الوصول للبيانات</td>
+                            <td>عالي</td>
+                            <td>محدود</td>
+                            <td>متوسط</td>
+                        </tr>
+                        <tr>
+                            <td>آخر تقييم أداء</td>
+                            <td>ضعيف</td>
+                            <td>جيد</td>
+                            <td>متميز</td>
+                        </tr>
+                        <tr>
+                            <td>الدافع المحتمل</td>
+                            <td>عالٍ (تقييم ضعيف)</td>
+                            <td>منخفض</td>
+                            <td>متوسط</td>
+                        </tr>
+                        <tr>
+                            <td>الفرصة</td>
+                            <td>عالية (وصول كامل)</td>
+                            <td>منخفضة</td>
+                            <td>متوسطة</td>
+                        </tr>
+                        <tr>
+                            <td>سجلات الوصول المشبوهة</td>
+                            <td>نعم (تصدير ملف كبير)</td>
+                            <td>لا</td>
+                            <td>نعم (وقت متأخر)</td>
+                        </tr>
+                        <tr>
+                            <td>الأجهزة المستخدمة</td>
+                            <td>جهاز غير معروف</td>
+                            <td>هاتف شخصي</td>
+                            <td>كمبيوتر مكتبي</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="comparison-analysis">
+                <h3>تحليل المقارنة</h3>
+                <div class="analysis-points">
+                    <div class="analysis-point">
+                        <i class="fas fa-user-circle"></i>
+                        <p><strong>Sami</strong> يمتلك الدافع (تقييم ضعيف) والفرصة (وصول عالي) والأداة (تصدير ملف كبير)</p>
+                    </div>
+                    <div class="analysis-point">
+                        <i class="fas fa-user-circle"></i>
+                        <p><strong>Layla</strong> لديها وصول محدود وبدون سجلات مشبوهة تذكر</p>
+                    </div>
+                    <div class="analysis-point">
+                        <i class="fas fa-user-circle"></i>
+                        <p><strong>Majed </strong>رغم أن لديه تسجيلات متأخرة، لكن لا يوجد دافع واضح أو أدلة قوية ضده</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- شاشة الأدلة -->
+    <div id="evidence-screen" class="screen">
+        <div class="logos">
+            <img src="assets/images/logo1.png" alt="Logo 1">
+            <img src="assets/images/logo2.png" alt="Logo 2">
+            <img src="assets/images/logo3.png" alt="Logo 3">
+        </div>
+        
+        <button class="back-btn" id="back-from-evidence">
+            <i class="fas fa-arrow-right"></i>
+            <span>رجوع</span>
+        </button>
+        
+        <h2>الأدلة</h2>
+        
+        
+        <div class="evidence-tabs">
+            <button class="tab-btn active" data-tab="file-logs">
+                <i class="fas fa-file"></i>
+                <span>File Access Logs</span>
+            </button>
+            <button class="tab-btn" data-tab="network-logs">
+                <i class="fas fa-network-wired"></i>
+                <span>Network Access Logs</span>
+            </button>
+            <button class="tab-btn" data-tab="performance">
+                <i class="fas fa-chart-line"></i>
+                <span>Performance Reviews</span>
+            </button>
+        </div>
+        
+        <div id="evidence-content" class="evidence-content">
+            <!-- سيتم ملؤه بواسطة JavaScript -->
+        </div>
+        
+
+        
+        <button id="solve-btn" class="btn cyber-btn">
+            <span>حل القضية</span>
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+
+    <!-- شاشة الحل -->
+    <div id="solve-screen" class="screen">
+        <div class="logos">
+            <img src="assets/images/logo1.png" alt="Logo 1">
+            <img src="assets/images/logo2.png" alt="Logo 2">
+            <img src="assets/images/logo3.png" alt="Logo 3">
+        </div>
+        
+        <button class="back-btn" id="back-from-solve">
+            <i class="fas fa-arrow-right"></i>
+            <span>رجوع</span>
+        </button>
+        
+        <h2>من هو المذنب؟</h2>
+        <p class="solve-instruction">اختر المشتبه به الذي تعتقد أنه المسؤول عن تسريب البيانات</p>
+        
+        <div id="suspects-choice" class="suspects-choice">
+            <!-- سيتم ملؤه بواسطة JavaScript -->
+        </div>
+        
+        <div id="solution-explanation" class="solution-explanation hidden">
+            <!-- سيتم ملؤه بواسطة JavaScript -->
+        </div>
+        
+        <div class="case-actions hidden" id="case-actions">
+            <button id="restart-case" class="btn cyber-btn-secondary">
+                <i class="fas fa-redo"></i>
+                <span>تحقيق جديد</span>
+            </button>
+
+        </div>
+    </div>
+
+    <script src="js/suspects.js"></script>
+    <script src="js/evidence.js"></script>
+    <script src="js/solution.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
