@@ -162,13 +162,7 @@
             <span>رجوع</span>
         </button>
         
-        <h2>المشتبه بهم</h2>
-        
-        <div class="tab-navigation">
-            <button class="tab-btn active" data-tab="all">جميع المشتبه بهم</button>
-            <button class="tab-btn" data-tab="comparison">مقارنة بينهم</button>
-        </div>
-        
+
         <div id="suspects-container" class="suspects-container">
             <!-- سيتم ملؤه بواسطة JavaScript -->
         </div>
@@ -186,97 +180,6 @@
         </button>
     </div>
 
-    <!-- شاشة مقارنة المشتبه بهم -->
-    <div id="comparison-screen" class="screen">
-        <div class="logos">
-            <img src="assets/images/logo1.png" alt="Logo 1">
-            <img src="assets/images/logo2.png" alt="Logo 2">
-        </div>
-        
-        <button class="back-btn" id="back-from-comparison">
-            <i class="fas fa-arrow-right"></i>
-            <span>رجوع</span>
-        </button>
-        
-        <h2>مقارنة بين المشتبه بهم</h2>
-        
-        <div class="comparison-content">
-            <div class="comparison-table-container">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>المعيار</th>
-                            <th>Sami</th>
-                            <th>Layla</th>
-                            <th>Majed</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>مدة العمل في الشركة</td>
-                            <td>6 سنوات</td>
-                            <td>3 أشهر</td>
-                            <td>3 سنوات</td>
-                        </tr>
-                        <tr>
-                            <td>مستوى الوصول للبيانات</td>
-                            <td>عالي</td>
-                            <td>محدود</td>
-                            <td>متوسط</td>
-                        </tr>
-                        <tr>
-                            <td>آخر تقييم أداء</td>
-                            <td>ضعيف</td>
-                            <td>جيد</td>
-                            <td>متميز</td>
-                        </tr>
-                        <tr>
-                            <td>الدافع المحتمل</td>
-                            <td>عالٍ (تقييم ضعيف)</td>
-                            <td>منخفض</td>
-                            <td>متوسط</td>
-                        </tr>
-                        <tr>
-                            <td>الفرصة</td>
-                            <td>عالية (وصول كامل)</td>
-                            <td>منخفضة</td>
-                            <td>متوسطة</td>
-                        </tr>
-                        <tr>
-                            <td>سجلات الوصول المشبوهة</td>
-                            <td>نعم (تصدير ملف كبير)</td>
-                            <td>لا</td>
-                            <td>نعم (وقت متأخر)</td>
-                        </tr>
-                        <tr>
-                            <td>الأجهزة المستخدمة</td>
-                            <td>جهاز غير معروف</td>
-                            <td>هاتف شخصي</td>
-                            <td>كمبيوتر مكتبي</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <div class="comparison-analysis">
-                <h3>تحليل المقارنة</h3>
-                <div class="analysis-points">
-                    <div class="analysis-point">
-                        <i class="fas fa-user-circle"></i>
-                        <p><strong>Sami</strong> يمتلك الدافع (تقييم ضعيف) والفرصة (وصول عالي) والأداة (تصدير ملف كبير)</p>
-                    </div>
-                    <div class="analysis-point">
-                        <i class="fas fa-user-circle"></i>
-                        <p><strong>Layla</strong> لديها وصول محدود وبدون سجلات مشبوهة تذكر</p>
-                    </div>
-                    <div class="analysis-point">
-                        <i class="fas fa-user-circle"></i>
-                        <p><strong>Majed </strong>رغم أن لديه تسجيلات متأخرة، لكن لا يوجد دافع واضح أو أدلة قوية ضده</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- شاشة الأدلة -->
     <div id="evidence-screen" class="screen">
