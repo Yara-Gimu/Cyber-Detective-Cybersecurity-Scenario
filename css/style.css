@@ -118,6 +118,7 @@ body::before {
     border: 1px solid rgba(165, 183, 255, 0.15);
     animation: fadeIn 0.5s ease;
     min-height: 75vh;
+    padding-top: 160px;
 }
 
 .screen.active {
@@ -128,27 +129,54 @@ body::before {
     from { opacity: 0; transform: translateY(25px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* ====== شاشة البداية ====== */
+#start-screen .logos .left img{
+    height: 30px;   /* حجم كبير */
+    width: auto;
+}
+#start-screen .logos .right img{
+    height: 70px;   /* حجم كبير */
+    width: auto;
+}
+
+/* ====== باقي الشاشات ====== */
+.screen:not(#start-screen) .logos .left img {
+    height: 30px;   /* حجم أصغر */
+    width: auto;
+        filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
+
+}
+
+.screen:not(#start-screen) .logos .right img {
+    height: 70px;   /* حجم أصغر */
+    width: auto;
+        filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
+
+}
 
 .logos {
     position: absolute;
     top: 10px;
     left: 25px;
+    right: 25px;
     display: flex;
-    gap: 15px;
+    justify-content: space-between; /* يسار ويمين */
+    align-items: center;
     z-index: 10;
 }
 
-.logos img {
-    height: 50px;
-    width: auto;
-    filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
-}
+
+
+
+
 
 /* تأثير الجليتش للعنوان */
 .cyber-glitch {
     position: relative;
     text-align: center;
     margin: 50px 0 40px 0;
+    margin-top: 160px;
+
 }
 
 .glitch {
@@ -295,6 +323,7 @@ body::before {
     font-size: 1rem;
     box-shadow: 0 0 10px rgba(165, 183, 255, 0.2);
     z-index: 11;
+    margin-top: 105px;
 }
 
 .back-btn:hover {
@@ -1513,3 +1542,4 @@ p, li, .case-value, .case-label {
 .evidence-tabs .tab-btn.hidden {
     display: none;
 }
+
