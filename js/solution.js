@@ -102,4 +102,19 @@ function showSolution(selectedSuspectId) {
     
     // التمرير إلى شرح الحل
     solutionExplanation.scrollIntoView({ behavior: 'smooth' });
+
+    try {
+  if (!window._GS_SUBMITTED_) {
+    const isCorrect = (selectedSuspectId === 'sami');
+
+    document.getElementById('gs_suspect').value = selectedSuspectId;
+    document.getElementById('gs_correct').value = String(isCorrect);
+
+    window._GS_SUBMITTED_ = true;
+    document.getElementById('sheetForm').submit(); // يرسل للـ iframe
+  }
+} catch(e) {
+  console.warn('Sheet submit skipped:', e);
+}
+
 }

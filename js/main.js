@@ -124,6 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // إعادة开始 التحقيق
     if (restartCaseBtn) {
         restartCaseBtn.addEventListener('click', () => {
+             window._GS_SUBMITTED_ = false;
             // مسح الملاحظات
             const notesElement = document.getElementById('investigator-notes');
             if (notesElement) notesElement.value = '';
