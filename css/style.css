@@ -1543,3 +1543,39 @@
         display: none;
     }
 
+    /* تحسين أحجام الشعارات لشاشات 9:16 (عمودي) */
+    @media (max-aspect-ratio: 9 / 16) {
+        /* شاشة البداية */
+        #start-screen .logos .left img {
+            height: 24px;
+            width: auto;
+        }
+        
+        #start-screen .logos .right img {
+            height: 55px;
+            width: auto;
+        }
+
+        /* شاشة التعليمات */
+        #help-screen .logos .left img {
+            height: 24px;
+            width: auto;
+        }
+        
+        #help-screen .logos .right img {
+            height: 55px;
+            width: auto;
+        }
+
+        /* شاشة القصة */
+        #story-screen .logos .left img {
+            height: 24px;
+            width: auto;
+        }
+        
+        #story-screen .logos .right img {
+            height: 55px;
+            width: auto;
+        }
+    }
+
