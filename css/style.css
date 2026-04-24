@@ -329,13 +329,15 @@
         color: var(--color-light);
         border: 1px solid var(--color-primary);
         border-radius: 8px;
-        padding: 12px 20px;
+        padding: 16px 32px;
         cursor: pointer;
         transition: var(--transition);
-        font-size: 1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
         box-shadow: 0 0 10px rgba(165, 183, 255, 0.2);
         z-index: 11;
         margin-top: 0;
+        min-width: 200px;
     }
 
     /* في الصفحات الأخرى: زر الرجوع في الأسفل */
@@ -1160,6 +1162,13 @@
             padding-bottom: 140px;
         }
         
+        .back-btn {
+            padding: 15px 28px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            min-width: 180px;
+        }
+        
         .glitch {
             font-size: 3.2rem;
         }
@@ -1404,9 +1413,11 @@
             left: 15px;
             margin: 0;
             align-self: auto;
-            padding: 10px 14px;
-            font-size: 0.9rem;
+            padding: 14px 24px;
+            font-size: 1rem;
+            font-weight: bold;
             z-index: 11;
+            min-width: 170px;
         }
 
         .screen:not(#start-screen) .back-btn {
@@ -1775,11 +1786,13 @@
             position: absolute;
             top: 60px;
             left: 12px;
-            padding: 8px 12px;
-            font-size: 0.85rem;
-            min-height: 45px;
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            font-weight: bold;
+            min-height: auto;
             margin: 0;
             z-index: 11;
+            min-width: 150px;
         }
 
         .screen:not(#start-screen) .back-btn {
@@ -2284,11 +2297,12 @@
             position: absolute;
             top: 75px;
             left: 20px;
-            padding: 12px 16px;
-            font-size: 1rem;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: bold;
             margin-top: 0;
             z-index: 12;
-            min-height: 55px;
+            min-width: 200px;
         }
 
         /* في الصفحات الأخرى: زر الرجوع في الأسفل */
