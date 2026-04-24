@@ -131,38 +131,57 @@
     }
     /* ====== شاشة البداية ====== */
     #start-screen .logos .left img{
-        height: 30px;   /* حجم كبير */
+        height: 30px;
         width: auto;
     }
     #start-screen .logos .right img{
-        height: 70px;   /* حجم كبير */
+        height: 70px;
         width: auto;
     }
 
     /* ====== باقي الشاشات ====== */
     .screen:not(#start-screen) .logos .left img {
-        height: 30px;   /* حجم أصغر */
+        height: 30px;
         width: auto;
-            filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
-
+        filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
     }
 
     .screen:not(#start-screen) .logos .right img {
-        height: 70px;   /* حجم أصغر */
+        height: 70px;
         width: auto;
-            filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
-
+        filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
     }
 
     .logos {
-        position: absolute;
+        position: fixed;
         top: 10px;
-        left: 25px;
-        right: 25px;
-        display: flex;
-        justify-content: space-between; /* يسار ويمين */
-        align-items: center;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 70px;
         z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+
+    .logos .left {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+    }
+
+    .logos .right {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
     }
 
 
@@ -1213,13 +1232,35 @@
         }
         
         .logos {
-            position: relative;
-            top: unset;
-            left: unset;
-            justify-content: center;
-            margin: 0 0 30px 0;
+            position: fixed;
+            top: 10px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            justify-content: space-between;
+            margin: 0;
+        }
+
+        .logos .left {
+            position: absolute;
+            left: 15px;
+            transform: translateY(-50%);
+        }
+
+        .logos .right {
+            position: absolute;
+            right: 15px;
+            transform: translateY(-50%);
         }
         
+        .logos .left img {
+            height: 20px;
+        }
+
+        .logos .right img {
+            height: 40px;
+        }
+
         .evidence-table {
             display: block;
             overflow-x: auto;
@@ -1234,10 +1275,6 @@
         .solution-explanation {
             margin: 35px 0;
             padding: 28px;
-        }
-        
-        .logos img {
-            height: 45px;
         }
     }
 
@@ -1308,8 +1345,32 @@
             padding: 20px;
         }
         
-        .logos img {
-            height: 40px;
+        .logos {
+            position: fixed;
+            top: 5px;
+            left: 0;
+            right: 0;
+            width: 100%;
+        }
+
+        .logos .left {
+            position: absolute;
+            left: 12px;
+            transform: translateY(-50%);
+        }
+
+        .logos .right {
+            position: absolute;
+            right: 12px;
+            transform: translateY(-50%);
+        }
+        
+        .logos .left img {
+            height: 18px;
+        }
+
+        .logos .right img {
+            height: 35px;
         }
         
         .back-btn {
@@ -1564,23 +1625,46 @@
         .logos {
             position: fixed;
             top: 5px;
-            left: 10px;
-            right: 10px;
+            left: 0;
+            right: 0;
+            width: 100%;
             height: 70px;
             z-index: 10;
         }
 
-        #start-screen .logos .left img,
+        .logos .left {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .logos .right {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #start-screen .logos .left img {
+            height: 20px;
+            width: auto;
+        }
+        
         #start-screen .logos .right img {
-            height: 50px;
+            height: 40px;
             width: auto;
         }
 
         #help-screen .logos .left img,
+        #story-screen .logos .left img {
+            height: 20px;
+            width: auto;
+        }
+        
         #help-screen .logos .right img,
-        #story-screen .logos .left img,
         #story-screen .logos .right img {
-            height: 50px;
+            height: 40px;
             width: auto;
         }
 
