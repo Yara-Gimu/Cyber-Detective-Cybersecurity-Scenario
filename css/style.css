@@ -1302,14 +1302,15 @@
             margin-right: 6px;
         }
 
+        /* تصغير الأزرار في الشاشات الصغيرة */
         .back-btn,
         #continue-btn,
         #to-evidence-btn,
         #solve-btn,
         #restart-case {
-            padding: 14px 24px;
-            font-size: 1rem;
-            min-width: 160px;
+            padding: 10px 16px;
+            font-size: 0.85rem;
+            min-width: 120px;
         }
         
         .suspects-container, .suspects-choice, .help-content {
@@ -1681,29 +1682,30 @@
         
         .btn {
             margin: 8px 4px;
-            padding: 10px 15px;
-            font-size: 0.9rem;
-            min-width: 130px;
-            min-height: 50px;
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            min-width: 110px;
+            min-height: auto;
         }
 
         .btn i {
-            font-size: 0.95rem;
-            margin-bottom: 4px;
+            font-size: 0.85rem;
+            margin-right: 4px;
         }
 
         .btn span {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
+        /* تصغير الأزرار أكثر في الشاشات الصغيرة جداً */
         .back-btn,
         #continue-btn,
         #to-evidence-btn,
         #solve-btn,
         #restart-case {
-            padding: 12px 20px;
-            font-size: 0.95rem;
-            min-width: 140px;
+            padding: 8px 12px;
+            font-size: 0.75rem;
+            min-width: 100px;
             min-height: auto;
         }
         
@@ -2265,7 +2267,7 @@
     }
 
     /* تحسين شامل لشاشات 9:16 (عمودي kiosk) */
-    @media (max-aspect-ratio: 9 / 16) {
+    @media (max-aspect-ratio: 9/16) {
         body {
             padding: 10px;
             font-size: 16px;
@@ -2321,65 +2323,79 @@
 
         /* العنوان الرئيسي */
         .glitch {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin: 20px 0 15px 0;
             letter-spacing: 1px;
             line-height: 1.2;
         }
 
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-top: 15px;
             margin-bottom: 20px;
         }
 
         h3 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
 
         h4 {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         /* النص الثانوي */
         .subtitle {
-            font-size: 1.2rem;
+            font-size: 1rem;
             margin: 0 0 25px 0;
             line-height: 1.5;
         }
 
         p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             line-height: 1.6;
             margin-bottom: 12px;
         }
 
-        /* الأزرار - محسّنة للمسّ على kiosk */
+        /* الأزرار - محسّنة للمسّ على kiosk مع تصغير الحجم */
         .btn {
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 12px 8px;
-            padding: 18px 24px;
-            font-size: 1.1rem;
-            min-width: 160px;
-            border-radius: 10px;
-            min-height: 70px;
+            margin: 8px 6px;
+            padding: 10px 16px;
+            font-size: 0.9rem;
+            min-width: 120px;
+            border-radius: 8px;
+            min-height: 55px;
             justify-content: center;
         }
 
         .btn i {
             margin-right: 0;
-            margin-bottom: 8px;
-            font-size: 1.5em;
+            margin-bottom: 5px;
+            font-size: 1.2em;
         }
 
         .btn span {
             text-align: center;
             line-height: 1.3;
+            font-size: 0.85rem;
         }
 
-        /* تحسينات الأزرار في kiosk */
+        /* تصحيح الأزرار في kiosk */
+        .back-btn,
+        #continue-btn,
+        #to-evidence-btn,
+        #solve-btn,
+        #restart-case {
+            padding: 10px 16px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            min-width: 110px;
+            z-index: 100;
+        }
+
+        /* تحسينات أزرار kiosk */
         #story-screen #continue-btn {
             left: 50%;
             transform: translateX(-50%);
@@ -2393,66 +2409,53 @@
         }
 
         #suspects-screen .back-btn {
-            left: 20px;
+            left: 15px;
             transform: none;
             right: auto;
         }
         #suspects-screen #to-evidence-btn {
             left: auto;
-            right: 20px;
+            right: 15px;
             transform: none;
         }
 
         #evidence-screen .back-btn {
-            left: 20px;
+            left: 15px;
             transform: none;
             right: auto;
         }
         #evidence-screen #solve-btn {
             left: auto;
-            right: 20px;
+            right: 15px;
             transform: none;
         }
 
         #solve-screen .back-btn {
-            left: 20px;
+            left: 15px;
             transform: none;
             right: auto;
         }
         #solve-screen #restart-case {
             left: auto;
-            right: 20px;
+            right: 15px;
             transform: none;
-        }
-
-        /* الأزرار الأخرى */
-        .back-btn,
-        #continue-btn,
-        #to-evidence-btn,
-        #solve-btn,
-        #restart-case {
-            padding: 16px 32px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            min-width: 200px;
-            z-index: 100;
         }
 
         /* في الصفحات الأخرى: زر الرجوع في الأسفل */
         .screen:not(#start-screen) .back-btn {
             position: fixed;
-            bottom: 20px;
+            bottom: 15px;
         }
 
         /* في صفحة الحل: زر تحقيق جديد في الأسفل على اليمين */
         #solve-screen .case-actions {
             position: absolute;
             top: auto;
-            right: 20px;
+            right: 15px;
             left: auto;
-            bottom: 20px;
+            bottom: 15px;
             flex-direction: row;
-            gap: 15px;
+            gap: 10px;
             margin: 0;
             display: none;
         }
@@ -2462,63 +2465,63 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
-            margin: 20px 0;
+            gap: 15px;
+            margin: 15px 0;
         }
 
         /* شاشة التعليمات */
         .help-content {
             grid-template-columns: 1fr;
-            gap: 20px;
-            margin: 20px 0;
-            margin-top: 50px;
+            gap: 15px;
+            margin: 15px 0;
+            margin-top: 40px;
         }
 
         .help-card {
-            padding: 20px;
-            margin: 10px 0;
+            padding: 15px;
+            margin: 8px 0;
             border-radius: 10px;
         }
 
         .help-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .help-card h3 {
-            font-size: 1.2rem;
+            font-size: 2rem;
             margin-bottom: 10px;
         }
 
+        .help-card h3 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
         .help-card p {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .help-tips {
-            margin: 20px 0;
-            padding: 20px;
+            margin: 15px 0;
+            padding: 15px;
         }
 
         .help-tips h4 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 10px;
         }
 
         .help-tips li {
-            font-size: 0.95rem;
-            padding: 10px 0;
-            padding-right: 25px;
+            font-size: 0.85rem;
+            padding: 8px 0;
+            padding-right: 20px;
         }
 
         .help-tips li::before {
-            font-size: 1.5rem;
-            top: 6px;
+            font-size: 1.2rem;
+            top: 5px;
         }
 
         /* شاشة القصة */
         .story-content {
-            padding: 20px;
-            margin: 20px 0;
+            padding: 15px;
+            margin: 15px 0;
             border-radius: 10px;
         }
 
@@ -2527,285 +2530,285 @@
         }
 
         .story-text p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             line-height: 1.6;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .case-file {
-            padding: 18px;
-            margin: 20px 0;
+            padding: 15px;
+            margin: 15px 0;
             border-radius: 10px;
         }
 
         .case-file-header {
-            font-size: 1.1rem;
-            padding-bottom: 12px;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            padding-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .case-file-header i {
-            margin-left: 10px;
+            margin-left: 8px;
         }
 
         .case-info {
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            font-size: 0.95rem;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            font-size: 0.85rem;
         }
 
         .case-label {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .case-value {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         /* البطاقات والحاويات */
         .suspect-card,
         .suspect-choice {
-            padding: 20px;
-            margin: 12px 0;
+            padding: 15px;
+            margin: 10px 0;
             border-radius: 10px;
         }
 
         .suspect-card img,
         .suspect-choice img {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 15px auto;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 12px auto;
         }
 
         .suspect-card h3,
         .suspect-choice h3 {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
         }
 
         .suspect-card {
-            margin: 10px 0;
+            margin: 8px 0;
         }
 
         .suspect-details p {
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.5;
         }
 
         /* الجداول */
         .evidence-table {
-            font-size: 0.9rem;
-            margin: 20px 0;
+            font-size: 0.8rem;
+            margin: 15px 0;
         }
 
         .evidence-table th,
         .evidence-table td {
-            padding: 12px 10px;
-            font-size: 0.9rem;
+            padding: 8px 6px;
+            font-size: 0.8rem;
         }
 
         .evidence-table th {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         .comparison-table th,
         .comparison-table td {
-            padding: 12px 8px;
-            font-size: 0.85rem;
+            padding: 8px 6px;
+            font-size: 0.75rem;
         }
 
         .comparison-table th {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
         /* علامات التبويب */
         .tab-navigation {
             flex-direction: column;
-            gap: 10px;
-            margin: 0 0 20px 0;
+            gap: 8px;
+            margin: 0 0 15px 0;
         }
 
         .tab-navigation .tab-btn,
         .evidence-tabs .tab-btn {
-            padding: 14px 20px;
-            font-size: 1rem;
+            padding: 10px 15px;
+            font-size: 0.9rem;
             border-radius: 8px;
             width: 100%;
         }
 
         .evidence-tabs {
             flex-direction: column;
-            gap: 10px;
-            margin: 25px 0 20px 0;
+            gap: 8px;
+            margin: 20px 0 15px 0;
             justify-content: flex-end;
         }
 
         .evidence-tabs .tab-btn i {
-            margin-left: 10px;
+            margin-left: 8px;
         }
 
         /* محتوى الأدلة */
         .evidence-header {
             flex-direction: column;
-            gap: 15px;
-            padding: 15px;
-            margin: 0 0 20px 0;
+            gap: 10px;
+            padding: 12px;
+            margin: 0 0 15px 0;
         }
 
         .evidence-counter {
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
 
         .evidence-counter i {
-            margin-left: 10px;
+            margin-left: 8px;
         }
 
         .evidence-content {
-            padding: 20px;
-            margin: 15px 0;
+            padding: 15px;
+            margin: 10px 0;
             min-height: auto;
             border-radius: 10px;
         }
 
         .performance-review {
-            padding: 15px;
-            margin: 0 0 15px 0;
+            padding: 12px;
+            margin: 0 0 12px 0;
             border-radius: 8px;
         }
 
         .performance-review h4 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            margin-bottom: 8px;
         }
 
         .performance-review p {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
         /* قسم الملاحظات */
         .notes-section {
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .notes-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
         }
 
         #investigator-notes {
-            min-height: 120px;
-            padding: 15px;
-            font-size: 0.95rem;
-            line-height: 1.6;
+            min-height: 100px;
+            padding: 12px;
+            font-size: 0.85rem;
+            line-height: 1.5;
             border-radius: 8px;
         }
 
         /* شاشة الحل */
         .solve-instruction {
-            font-size: 1.1rem;
-            margin: 0 0 30px 0;
+            font-size: 1rem;
+            margin: 0 0 20px 0;
         }
 
         .suspects-choice {
             grid-template-columns: 1fr;
-            gap: 20px;
-            margin: 30px 0;
+            gap: 15px;
+            margin: 20px 0;
         }
 
         .solution-explanation {
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 10px;
-        }
-
-        .solution-section {
-            margin: 0 0 20px 0;
-        }
-
-        .solution-section h4 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-        }
-
-        .solution-section p {
-            font-size: 0.95rem;
-            margin-bottom: 10px;
-        }
-
-        /* أشرطة التقدم */
-        .case-progress {
-            padding: 20px;
+            padding: 15px;
             margin: 20px 0;
             border-radius: 10px;
         }
 
+        .solution-section {
+            margin: 0 0 15px 0;
+        }
+
+        .solution-section h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .solution-section p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        /* أشرطة التقدم */
+        .case-progress {
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 10px;
+        }
+
         .progress-text {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 12px;
         }
 
         .progress-bar {
-            height: 16px;
-            border-radius: 8px;
+            height: 12px;
+            border-radius: 6px;
         }
 
         .progress-fill {
-            border-radius: 8px;
+            border-radius: 6px;
         }
 
         /* أجراءات */
         .case-actions {
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
             margin: 0;
             position: absolute;
-            bottom: 20px;
-            left: 30px;
+            bottom: 15px;
+            left: 20px;
         }
 
         /* جدول المقارنة */
         .comparison-analysis {
-            padding: 15px;
+            padding: 12px;
             border-radius: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         .comparison-analysis h3 {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            margin-bottom: 8px;
         }
 
         .analysis-point {
-            padding: 10px;
+            padding: 8px;
             border-radius: 6px;
-            gap: 10px;
+            gap: 8px;
         }
 
         .analysis-point i {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .analysis-point p {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
 
         /* حاوية الجدول */
         .table-container {
             border-radius: 8px;
-            margin: 15px 0;
+            margin: 12px 0;
         }
 
         .table-description {
-            font-size: 0.9rem;
-            margin-bottom: 12px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
         }
 
         /* شريط التمرير */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 8px;
         }
 
         ::-webkit-scrollbar-thumb {
-            border-width: 3px;
+            border-width: 2px;
         }
 
         /* التزيينات السيبرانية */
@@ -2815,33 +2818,33 @@
 
         /* حاوية البداية */
         .start-content {
-            margin: 15px 0;
+            margin: 10px 0;
         }
 
         /* القصة */
         .story-content {
             border-left-width: 2px;
-            padding: 15px;
+            padding: 12px;
         }
 
         /* نصائح المساعدة */
         .help-tips li:before {
             right: 5px;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         /* تقليلات إضافية للعناصر */
         .suspects-container {
-            gap: 12px;
-            margin: 12px 0;
+            gap: 10px;
+            margin: 10px 0;
         }
 
         .comparison-table-container {
-            margin: 12px 0;
+            margin: 10px 0;
         }
 
         .evidence-content {
-            min-height: 150px;
+            min-height: 120px;
         }
 
         /* التركيز على سهولة الاستخدام على Kiosk */
