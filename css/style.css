@@ -200,7 +200,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         line-height: 1.1;
-        text-shadow: 1px 1px 0px var(--color-secondary), -1px -1px 0px var(--color-accent); /* خفف الظل */
+        text-shadow: 1px 1px 0px var(--color-secondary), -1px -1px 0px var(--color-accent);
         animation: glitch-effect 4s infinite;
         margin: 0 0 30px 0;
     }
@@ -2222,18 +2222,18 @@
     }
 
     /* تأثيرات للخلايا المهمة في الجدول */
-    .comparison-table tr td:nth-child(2) { /* خلايا Sami */
+    .comparison-table tr td:nth-child(2) {
         background-color: rgba(244, 67, 54, 0.1);
         color: #ff8a80;
         font-weight: bold;
     }
 
-    .comparison-table tr td:nth-child(3) { /* خلايا Layla */
+    .comparison-table tr td:nth-child(3) {
         background-color: rgba(76, 175, 80, 0.1);
         color: #a5d6a7;
     }
 
-    .comparison-table tr td:nth-child(4) { /* خلايا Majed */
+    .comparison-table tr td:nth-child(4) {
         background-color: rgba(255, 152, 0, 0.1);
         color: #ffd54f;
     }
