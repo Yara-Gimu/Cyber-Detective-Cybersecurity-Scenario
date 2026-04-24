@@ -119,6 +119,7 @@
         animation: fadeIn 0.5s ease;
         min-height: 75vh;
         padding-top: 160px;
+        padding-bottom: 150px;
     }
 
     .screen.active {
@@ -350,13 +351,13 @@
         left: 20px;
     }
 
-    /* في صفحة الحل: زر تحقيق جديد في الأعلى على اليمين */
+    /* في صفحة الحل: زر تحقيق جديد في الأسفل على اليمين */
     #solve-screen .case-actions {
         position: absolute;
-        top: 75px;
+        top: auto;
         right: 20px;
         left: auto;
-        bottom: auto;
+        bottom: 20px;
         flex-direction: row;
         gap: 15px;
         margin: 0;
@@ -1156,6 +1157,7 @@
         .screen {
             padding: 30px 25px;
             margin: 25px auto;
+            padding-bottom: 140px;
         }
         
         .glitch {
@@ -1191,6 +1193,7 @@
             margin: 10px auto;
             border-radius: 12px;
             padding-top: 80px;
+            padding-bottom: 120px;
         }
         
         .glitch {
@@ -1419,13 +1422,13 @@
             bottom: auto;
         }
 
-        /* في صفحة الحل: زر تحقيق جديد في الأعلى */
+        /* في صفحة الحل: زر تحقيق جديد في الأسفل */
         #solve-screen .case-actions {
             position: absolute;
-            top: 65px;
+            top: auto;
             right: 15px;
             left: auto;
-            bottom: auto;
+            bottom: 15px;
             flex-direction: row;
             gap: 10px;
             margin: 0;
@@ -1558,6 +1561,7 @@
             margin: 8px auto;
             border-radius: 10px;
             padding-top: 75px;
+            padding-bottom: 100px;
         }
         
         .glitch {
@@ -1791,13 +1795,13 @@
             bottom: auto;
         }
 
-        /* في صفحة الحل: زر تحقيق جديد في الأعلى */
+        /* في صفحة الحل: زر تحقيق جديد في الأسفل */
         #solve-screen .case-actions {
             position: absolute;
-            top: 60px;
+            top: auto;
             right: 12px;
             left: auto;
-            bottom: auto;
+            bottom: 12px;
             flex-direction: column;
             gap: 8px;
             margin: 0;
@@ -2173,6 +2177,7 @@
             margin: 10px auto;
             padding: 15px 12px;
             padding-top: 90px;
+            padding-bottom: 150px;
             border-radius: 12px;
             min-height: auto;
         }
@@ -2300,13 +2305,13 @@
             bottom: auto;
         }
 
-        /* في صفحة الحل: زر تحقيق جديد في الأعلى على اليمين */
+        /* في صفحة الحل: زر تحقيق جديد في الأسفل على اليمين */
         #solve-screen .case-actions {
             position: absolute;
-            top: 75px;
+            top: auto;
             right: 20px;
             left: auto;
-            bottom: auto;
+            bottom: 20px;
             flex-direction: row;
             gap: 15px;
             margin: 0;
