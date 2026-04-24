@@ -129,27 +129,19 @@
         from { opacity: 0; transform: translateY(25px); }
         to { opacity: 1; transform: translateY(0); }
     }
-    /* ====== شاشة البداية ====== */
-    #start-screen .logos .left img{
-        height: 30px;
-        width: auto;
-    }
-    #start-screen .logos .right img{
-        height: 70px;
-        width: auto;
-    }
-
-    /* ====== باقي الشاشات ====== */
-    .screen:not(#start-screen) .logos .left img {
+    /* ====== الشعارات - موحدة في جميع الشاشات ====== */
+    .logos .left img {
         height: 30px;
         width: auto;
         filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
+        transition: var(--transition);
     }
 
-    .screen:not(#start-screen) .logos .right img {
+    .logos .right img {
         height: 70px;
         width: auto;
         filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
+        transition: var(--transition);
     }
 
     .logos {
@@ -328,8 +320,8 @@
     /* زر الرجوع */
     .back-btn {
         position: absolute;
-        top: 10px;
-        right: 25px;
+        top: 75px;
+        left: 20px;
         display: flex;
         align-items: center;
         background: rgba(165, 183, 255, 0.12);
@@ -342,7 +334,32 @@
         font-size: 1rem;
         box-shadow: 0 0 10px rgba(165, 183, 255, 0.2);
         z-index: 11;
-        margin-top: 105px;
+        margin-top: 0;
+    }
+
+    /* في الصفحات الأخرى: زر الرجوع في الأسفل */
+    .screen:not(#start-screen):not(#solve-screen) .back-btn {
+        top: auto;
+        bottom: 20px;
+        left: 20px;
+    }
+
+    /* في صفحة الحل: زر الرجوع في الأعلى */
+    #solve-screen .back-btn {
+        top: 75px;
+        left: 20px;
+    }
+
+    /* في صفحة الحل: زر تحقيق جديد في الأعلى على اليمين */
+    #solve-screen .case-actions {
+        position: absolute;
+        top: 75px;
+        right: 20px;
+        left: auto;
+        bottom: auto;
+        flex-direction: row;
+        gap: 15px;
+        margin: 0;
     }
 
     .back-btn:hover {
@@ -698,7 +715,7 @@
 
     .evidence-tabs {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         margin: 35px 0 30px 0;
         gap: 20px;
     }
@@ -923,9 +940,20 @@
 
     .case-actions {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 25px;
         margin: 35px 0 0 0;
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+    }
+
+    .evidence-tabs {
+        display: flex;
+        justify-content: flex-end;
+        margin: 35px 0 30px 0;
+        gap: 20px;
+        position: relative;
     }
 
     /* تأثيرات الشبكة السيبرانية */
@@ -1275,6 +1303,7 @@
         .evidence-tabs {
             flex-direction: column;
             gap: 8px;
+            justify-content: flex-end;
         }
 
         .evidence-tabs .tab-btn {
@@ -1356,16 +1385,45 @@
         .case-actions {
             flex-direction: column;
             gap: 10px;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
         }
 
         .back-btn {
-            position: relative;
-            top: unset;
-            right: unset;
-            margin: 0 0 15px 0;
-            align-self: flex-end;
+            position: absolute;
+            top: 65px;
+            left: 15px;
+            margin: 0;
+            align-self: auto;
             padding: 10px 14px;
             font-size: 0.9rem;
+            z-index: 11;
+        }
+
+        .screen:not(#start-screen) .back-btn {
+            top: auto;
+            bottom: 15px;
+            left: 15px;
+        }
+
+        /* في صفحة الحل: زر الرجوع في الأعلى */
+        #solve-screen .back-btn {
+            top: 65px;
+            left: 15px;
+            bottom: auto;
+        }
+
+        /* في صفحة الحل: زر تحقيق جديد في الأعلى */
+        #solve-screen .case-actions {
+            position: absolute;
+            top: 65px;
+            right: 15px;
+            left: auto;
+            bottom: auto;
+            flex-direction: row;
+            gap: 10px;
+            margin: 0;
         }
         
         .logos {
@@ -1392,10 +1450,12 @@
         
         .logos .left img {
             height: 20px;
+            filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
         }
 
         .logos .right img {
             height: 40px;
+            filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
         }
         
         .tab-navigation {
@@ -1611,6 +1671,7 @@
         
         .evidence-tabs {
             gap: 6px;
+            justify-content: flex-end;
         }
 
         .evidence-tabs .tab-btn {
@@ -1691,14 +1752,46 @@
         
         .case-actions {
             gap: 8px;
-            margin: 12px 0;
+            margin: 0;
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
         }
 
         .back-btn {
+            position: absolute;
+            top: 60px;
+            left: 12px;
             padding: 8px 12px;
             font-size: 0.85rem;
             min-height: 45px;
-            margin: 0 0 12px 0;
+            margin: 0;
+            z-index: 11;
+        }
+
+        .screen:not(#start-screen) .back-btn {
+            top: auto;
+            bottom: 12px;
+            left: 12px;
+        }
+
+        /* في صفحة الحل: زر الرجوع في الأعلى */
+        #solve-screen .back-btn {
+            top: 60px;
+            left: 12px;
+            bottom: auto;
+        }
+
+        /* في صفحة الحل: زر تحقيق جديد في الأعلى */
+        #solve-screen .case-actions {
+            position: absolute;
+            top: 60px;
+            right: 12px;
+            left: auto;
+            bottom: auto;
+            flex-direction: column;
+            gap: 8px;
+            margin: 0;
         }
         
         .logos {
@@ -1715,10 +1808,12 @@
         
         .logos .left img {
             height: 18px;
+            filter: drop-shadow(0 0 6px rgba(165, 183, 255, 0.5));
         }
 
         .logos .right img {
             height: 35px;
+            filter: drop-shadow(0 0 6px rgba(165, 183, 255, 0.5));
         }
         
         .tab-navigation {
@@ -2098,26 +2193,16 @@
             transform: translateY(-50%);
         }
 
-        #start-screen .logos .left img {
+        .logos .left img {
             height: 20px;
             width: auto;
+            filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
         }
         
-        #start-screen .logos .right img {
+        .logos .right img {
             height: 40px;
             width: auto;
-        }
-
-        #help-screen .logos .left img,
-        #story-screen .logos .left img {
-            height: 20px;
-            width: auto;
-        }
-        
-        #help-screen .logos .right img,
-        #story-screen .logos .right img {
-            height: 40px;
-            width: auto;
+            filter: drop-shadow(0 0 8px rgba(165, 183, 255, 0.6));
         }
 
         /* العنوان الرئيسي */
@@ -2182,14 +2267,40 @@
 
         /* زر الرجوع */
         .back-btn {
-            position: fixed;
-            top: 80px;
-            right: 10px;
+            position: absolute;
+            top: 75px;
+            left: 20px;
             padding: 12px 16px;
             font-size: 1rem;
             margin-top: 0;
             z-index: 12;
             min-height: 55px;
+        }
+
+        /* في الصفحات الأخرى: زر الرجوع في الأسفل */
+        .screen:not(#start-screen) .back-btn {
+            top: auto;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        /* في صفحة الحل: زر الرجوع في الأعلى */
+        #solve-screen .back-btn {
+            top: 75px;
+            left: 20px;
+            bottom: auto;
+        }
+
+        /* في صفحة الحل: زر تحقيق جديد في الأعلى على اليمين */
+        #solve-screen .case-actions {
+            position: absolute;
+            top: 75px;
+            right: 20px;
+            left: auto;
+            bottom: auto;
+            flex-direction: row;
+            gap: 15px;
+            margin: 0;
         }
 
         /* المحتوى الأساسي */
@@ -2370,6 +2481,7 @@
             flex-direction: column;
             gap: 10px;
             margin: 25px 0 20px 0;
+            justify-content: flex-end;
         }
 
         .evidence-tabs .tab-btn i {
@@ -2489,7 +2601,10 @@
         .case-actions {
             flex-direction: column;
             gap: 15px;
-            margin: 20px 0;
+            margin: 0;
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
         }
 
         /* جدول المقارنة */
