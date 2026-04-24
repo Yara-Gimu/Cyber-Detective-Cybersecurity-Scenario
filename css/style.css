@@ -1,4 +1,4 @@
-    /* أنماط CSS محسنة مع تأثيرات إضافية */
+/* أنماط CSS محسنة مع تأثيرات إضافية */
 
     * {
         margin: 0;
@@ -318,13 +318,11 @@
         font-size: 1.2em;
     }
 
-    /* زر الرجوع */
+    /* زر الرجوع - الأنماط الأساسية */
     .back-btn {
-        position: absolute;
-        top: 75px;
-        left: 20px;
         display: flex;
         align-items: center;
+        justify-content: center;
         background: rgba(165, 183, 255, 0.12);
         color: var(--color-light);
         border: 1px solid var(--color-primary);
@@ -335,34 +333,77 @@
         font-size: 1.1rem;
         font-weight: bold;
         box-shadow: 0 0 10px rgba(165, 183, 255, 0.2);
-        z-index: 11;
-        margin-top: 0;
+        z-index: 100;
         min-width: 200px;
     }
 
-    /* في الصفحات الأخرى: زر الرجوع في الأسفل */
-    .screen:not(#start-screen):not(#solve-screen) .back-btn {
-        top: auto;
+    /* الأزرار الخمسة المحددة - موحدة في الأسفل */
+    #continue-btn,
+    #to-evidence-btn,
+    #solve-btn,
+    #restart-case,
+    .back-btn {
+        position: fixed;
         bottom: 20px;
-        left: 20px;
-    }
-
-    /* في صفحة الحل: زر الرجوع في الأعلى */
-    #solve-screen .back-btn {
-        top: 75px;
-        left: 20px;
-    }
-
-    /* في صفحة الحل: زر تحقيق جديد في الأسفل على اليمين */
-    #solve-screen .case-actions {
-        position: absolute;
-        top: auto;
-        right: 20px;
-        left: auto;
-        bottom: 20px;
-        flex-direction: row;
-        gap: 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 32px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        min-width: 200px;
         margin: 0;
+        z-index: 100;
+    }
+
+    /* شاشة القصة: زر المتابعة في المنتصف */
+    #story-screen #continue-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+
+    /* شاشة المساعدة: زر الرجوع في المنتصف */
+    #help-screen .back-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+    }
+
+    /* شاشة المشتبه بهم: الرجوع يساراً والأدلة يميناً */
+    #suspects-screen .back-btn {
+        left: 20px;
+        transform: none;
+        right: auto;
+    }
+    #suspects-screen #to-evidence-btn {
+        left: auto;
+        right: 20px;
+        transform: none;
+    }
+
+    /* شاشة الأدلة: الرجوع يساراً والحل يميناً */
+    #evidence-screen .back-btn {
+        left: 20px;
+        transform: none;
+        right: auto;
+    }
+    #evidence-screen #solve-btn {
+        left: auto;
+        right: 20px;
+        transform: none;
+    }
+
+    /* شاشة الحل: الرجوع يساراً والتحقيق الجديد يميناً */
+    #solve-screen .back-btn {
+        left: 20px;
+        transform: none;
+        right: auto;
+    }
+    #solve-screen #restart-case {
+        left: auto;
+        right: 20px;
+        transform: none;
     }
 
     .back-btn:hover {
@@ -1168,6 +1209,15 @@
             font-weight: bold;
             min-width: 180px;
         }
+
+        #continue-btn,
+        #to-evidence-btn,
+        #solve-btn,
+        #restart-case {
+            padding: 15px 28px;
+            font-size: 1.05rem;
+            min-width: 180px;
+        }
         
         .glitch {
             font-size: 3.2rem;
@@ -1250,6 +1300,16 @@
         .btn i {
             font-size: 1rem;
             margin-right: 6px;
+        }
+
+        .back-btn,
+        #continue-btn,
+        #to-evidence-btn,
+        #solve-btn,
+        #restart-case {
+            padding: 14px 24px;
+            font-size: 1rem;
+            min-width: 160px;
         }
         
         .suspects-container, .suspects-choice, .help-content {
@@ -1407,42 +1467,50 @@
             left: 15px;
         }
 
-        .back-btn {
-            position: absolute;
-            top: 65px;
-            left: 15px;
-            margin: 0;
-            align-self: auto;
-            padding: 14px 24px;
-            font-size: 1rem;
-            font-weight: bold;
-            z-index: 11;
-            min-width: 170px;
+        /* تحسينات الأزرار في الشاشات الصغيرة */
+        #story-screen #continue-btn {
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
         }
 
-        .screen:not(#start-screen) .back-btn {
-            top: auto;
-            bottom: 15px;
-            left: 15px;
+        #help-screen .back-btn {
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
         }
 
-        /* في صفحة الحل: زر الرجوع في الأعلى */
-        #solve-screen .back-btn {
-            top: 65px;
-            left: 15px;
-            bottom: auto;
+        #suspects-screen .back-btn {
+            left: 20px;
+            transform: none;
+            right: auto;
         }
-
-        /* في صفحة الحل: زر تحقيق جديد في الأسفل */
-        #solve-screen .case-actions {
-            position: absolute;
-            top: auto;
-            right: 15px;
+        #suspects-screen #to-evidence-btn {
             left: auto;
-            bottom: 15px;
-            flex-direction: row;
-            gap: 10px;
-            margin: 0;
+            right: 20px;
+            transform: none;
+        }
+
+        #evidence-screen .back-btn {
+            left: 20px;
+            transform: none;
+            right: auto;
+        }
+        #evidence-screen #solve-btn {
+            left: auto;
+            right: 20px;
+            transform: none;
+        }
+
+        #solve-screen .back-btn {
+            left: 20px;
+            transform: none;
+            right: auto;
+        }
+        #solve-screen #restart-case {
+            left: auto;
+            right: 20px;
+            transform: none;
         }
         
         .logos {
@@ -1627,6 +1695,17 @@
         .btn span {
             font-size: 0.85rem;
         }
+
+        .back-btn,
+        #continue-btn,
+        #to-evidence-btn,
+        #solve-btn,
+        #restart-case {
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            min-width: 140px;
+            min-height: auto;
+        }
         
         .suspects-container, .suspects-choice, .help-content {
             gap: 12px;
@@ -1782,42 +1861,50 @@
             left: 12px;
         }
 
-        .back-btn {
-            position: absolute;
-            top: 60px;
-            left: 12px;
-            padding: 12px 20px;
-            font-size: 0.95rem;
-            font-weight: bold;
-            min-height: auto;
-            margin: 0;
-            z-index: 11;
-            min-width: 150px;
+        /* تحسينات الأزرار في الشاشات الصغيرة جداً */
+        #story-screen #continue-btn {
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
         }
 
-        .screen:not(#start-screen) .back-btn {
-            top: auto;
-            bottom: 12px;
-            left: 12px;
+        #help-screen .back-btn {
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
         }
 
-        /* في صفحة الحل: زر الرجوع في الأعلى */
-        #solve-screen .back-btn {
-            top: 60px;
+        #suspects-screen .back-btn {
             left: 12px;
-            bottom: auto;
+            transform: none;
+            right: auto;
         }
-
-        /* في صفحة الحل: زر تحقيق جديد في الأسفل */
-        #solve-screen .case-actions {
-            position: absolute;
-            top: auto;
-            right: 12px;
+        #suspects-screen #to-evidence-btn {
             left: auto;
-            bottom: 12px;
-            flex-direction: column;
-            gap: 8px;
-            margin: 0;
+            right: 12px;
+            transform: none;
+        }
+
+        #evidence-screen .back-btn {
+            left: 12px;
+            transform: none;
+            right: auto;
+        }
+        #evidence-screen #solve-btn {
+            left: auto;
+            right: 12px;
+            transform: none;
+        }
+
+        #solve-screen .back-btn {
+            left: 12px;
+            transform: none;
+            right: auto;
+        }
+        #solve-screen #restart-case {
+            left: auto;
+            right: 12px;
+            transform: none;
         }
         
         .logos {
@@ -2292,31 +2379,69 @@
             line-height: 1.3;
         }
 
-        /* زر الرجوع */
-        .back-btn {
-            position: absolute;
-            top: 75px;
+        /* تحسينات الأزرار في kiosk */
+        #story-screen #continue-btn {
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+        }
+
+        #help-screen .back-btn {
+            left: 50%;
+            transform: translateX(-50%);
+            right: auto;
+        }
+
+        #suspects-screen .back-btn {
             left: 20px;
+            transform: none;
+            right: auto;
+        }
+        #suspects-screen #to-evidence-btn {
+            left: auto;
+            right: 20px;
+            transform: none;
+        }
+
+        #evidence-screen .back-btn {
+            left: 20px;
+            transform: none;
+            right: auto;
+        }
+        #evidence-screen #solve-btn {
+            left: auto;
+            right: 20px;
+            transform: none;
+        }
+
+        #solve-screen .back-btn {
+            left: 20px;
+            transform: none;
+            right: auto;
+        }
+        #solve-screen #restart-case {
+            left: auto;
+            right: 20px;
+            transform: none;
+        }
+
+        /* الأزرار الأخرى */
+        .back-btn,
+        #continue-btn,
+        #to-evidence-btn,
+        #solve-btn,
+        #restart-case {
             padding: 16px 32px;
             font-size: 1.1rem;
             font-weight: bold;
-            margin-top: 0;
-            z-index: 12;
             min-width: 200px;
+            z-index: 100;
         }
 
         /* في الصفحات الأخرى: زر الرجوع في الأسفل */
         .screen:not(#start-screen) .back-btn {
-            top: auto;
+            position: fixed;
             bottom: 20px;
-            left: 20px;
-        }
-
-        /* في صفحة الحل: زر الرجوع في الأعلى */
-        #solve-screen .back-btn {
-            top: 75px;
-            left: 20px;
-            bottom: auto;
         }
 
         /* في صفحة الحل: زر تحقيق جديد في الأسفل على اليمين */
@@ -2329,6 +2454,7 @@
             flex-direction: row;
             gap: 15px;
             margin: 0;
+            display: none;
         }
 
         /* المحتوى الأساسي */
@@ -2733,4 +2859,3 @@
             }
         }
     }
-
