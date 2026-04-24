@@ -379,6 +379,7 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
         margin: 40px 0;
+        margin-top: 50px;
     }
 
     .help-card {
@@ -1244,6 +1245,10 @@
             gap: 15px;
             margin: 15px 0;
         }
+
+        .help-content {
+            margin-top: 40px;
+        }
         
         .suspect-card, .suspect-choice {
             padding: 15px;
@@ -1611,6 +1616,10 @@
         .suspects-container, .suspects-choice, .help-content {
             gap: 12px;
             margin: 12px 0;
+        }
+
+        .help-content {
+            margin-top: 30px;
         }
         
         .suspect-card, .suspect-choice {
@@ -2317,6 +2326,7 @@
             grid-template-columns: 1fr;
             gap: 20px;
             margin: 20px 0;
+            margin-top: 50px;
         }
 
         .help-card {
